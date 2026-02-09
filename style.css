@@ -1,0 +1,426 @@
+/* ==========================
+   GLOBAL STYLE
+========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f6f9f5;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ==========================
+   HEADER + NAVBAR
+========================== */
+header {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("https://diperpa.badungkab.go.id/storage/olds/diperpa/Panduan-Umum-Cara-Ternak-Ayam-Kampung_913725.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.navbar {
+  width: 100%;
+  padding: 15px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(6px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.logo {
+  font-size: 1.6rem;
+  color: white;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #63e36f;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #63e36f;
+  border-bottom: 2px solid #63e36f;
+  padding-bottom: 3px;
+}
+
+/* Menu toggle (mobile) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* ==========================
+   HERO OVERLAY
+========================== */
+.overlay {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+.overlay h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.overlay h1 span {
+  color: #63e36f;
+}
+
+.overlay p {
+  font-size: 1.2rem;
+  margin: 15px 0 25px;
+  max-width: 650px;
+  opacity: 0.9;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 30px;
+  background: #63e36f;
+  color: #0b2d12;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s ease;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.3);
+}
+
+.btn:hover {
+  background: #44c954;
+  transform: scale(1.05);
+}
+
+/* ==========================
+   MAIN CONTAINER
+========================== */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 70px 0;
+}
+
+.centered-section {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.centered-section h2 {
+  font-size: 2.2rem;
+  color: #1a5e2a;
+  margin-bottom: 15px;
+  font-weight: 800;
+  position: relative;
+}
+
+.centered-section h2::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #63e36f;
+  display: block;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+
+.centered-section p {
+  max-width: 850px;
+  margin: auto;
+  font-size: 1.05rem;
+  color: #333;
+}
+
+/* ==========================
+   VISI MISI BOX
+========================== */
+.visi-misi-box {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  margin-top: 35px;
+  flex-wrap: wrap;
+}
+
+.visi, .misi {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  width: 480px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  transition: 0.3s;
+}
+
+.visi:hover, .misi:hover {
+  transform: translateY(-6px);
+}
+
+.visi h3, .misi h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: #1a5e2a;
+}
+
+.misi ul {
+  list-style: none;
+  padding: 0;
+}
+
+.misi ul ul {
+  background: #f1fff2;
+  padding: 10px 15px;
+  margin: 8px 0;
+  border-radius: 10px;
+  font-weight: 600;
+  color: #1a5e2a;
+}
+
+/* ==========================
+   FITUR SECTION
+========================== */
+#fitur {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+#fitur h2 {
+  font-size: 2.2rem;
+  color: #1a5e2a;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+.fitur-container {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.fitur-box {
+  width: 300px;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  transition: 0.3s;
+}
+
+.fitur-box:hover {
+  transform: translateY(-8px);
+}
+
+.fitur-box img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.fitur-box h3 {
+  font-size: 1.3rem;
+  color: #1a5e2a;
+  margin-bottom: 10px;
+}
+
+.fitur-box p {
+  font-size: 1rem;
+  color: #444;
+}
+
+/* ==========================
+   ETALASE PRODUK
+========================== */
+.etalase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 22px;
+  margin-top: 35px;
+}
+
+.produk-card {
+  background: white;
+  border-radius: 15px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  transition: 0.3s;
+  text-align: center;
+}
+
+.produk-card:hover {
+  transform: translateY(-7px);
+}
+
+.produk-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.produk-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #1a5e2a;
+  font-weight: 800;
+}
+
+.produk-card p {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.harga {
+  display: inline-block;
+  background: #63e36f;
+  color: #0b2d12;
+  padding: 8px 15px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+/* ==========================
+   TESTIMONI
+========================== */
+.testimoni-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 35px;
+}
+
+.testimoni-card {
+  background: white;
+  width: 350px;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  transition: 0.3s;
+}
+
+.testimoni-card:hover {
+  transform: translateY(-8px);
+}
+
+.testimoni-card img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid #63e36f;
+}
+
+.testimoni-card p {
+  font-style: italic;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.testimoni-card h4 {
+  color: #1a5e2a;
+  font-weight: 800;
+}
+
+/* ==========================
+   KONTAK
+========================== */
+#kontak p {
+  font-size: 1.05rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+#kontak .btn {
+  margin-top: 25px;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+footer {
+  background: #0f2d16;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-size: 0.95rem;
+}
+
+/* ==========================
+   RESPONSIVE NAVBAR
+========================== */
+@media (max-width: 768px) {
+  nav {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.85);
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 0;
+    display: none;
+  }
+
+  nav a {
+    padding: 12px;
+    display: block;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .overlay h1 {
+    font-size: 2.5rem;
+  }
+
+  .overlay p {
+    font-size: 1rem;
+  }
+}
